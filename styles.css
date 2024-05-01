@@ -1,0 +1,215 @@
+/* General styling for the container */
+body {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container {
+    display: flex; /* Uses flexbox to place divs side by side */
+    width: 100%; /* Full width of the container */
+}
+
+/* Styling for the left division */
+.left {
+    width: 30%; /* 30% of the container's width */
+    background-color: #f8f9fa; /* Light grey background for visibility */
+    padding: 20px; /* Padding around the content */
+}
+
+/* Styling for the right division */
+.right {
+    width: 70%; /* 70% of the container's width */
+    background-color: #e9ecef; /* Slightly darker grey background */
+    padding: 20px; /* Padding around the content */
+}
+
+/* Styling for first-container1 */
+.first-container1 {
+    height: 100%
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for first-container2 */
+.first-container2 {
+    height: 100%
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for first-containeri3 */
+.first-container3 {
+    height: 100%
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-image {
+   width: 100vw;
+   height: 20vw;
+#   object-fit: cover;
+}
+
+h1 {
+    font-weight: 900;
+    line-height: 1.25em;
+    text-align: center;
+    margin-top: .8em;
+    margin-bottom: .125em;
+    font-size: 2.44140625em;
+    letter-spacing: -.75px;
+    color: #8B0000;
+    font-family: cursive;
+}
+
+h2 {
+    text-align: center;
+font-weight: 900;
+}
+
+p {
+        font-size: 1.5625em;
+        letter-spacing: -.5px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    margin-top: 0;
+    margin-bottom: .512em;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.third-container {
+    display: flex; /* Uses flexbox to place divs side by side */
+    width: 100%; /* Full width of the container */
+    justify-content: space-between;
+    gap: 3px;
+} 
+
+/* Styling for third-container1 */
+.third-container1 {
+    width:30%;
+    height: 100%
+    margin: 0;
+    display: block;
+    align-items: center;
+}
+
+/* Styling for third-container2 */
+.third-container2 {
+	width:30%;
+    height: 100%
+    margin: 0;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+	
+
+/* Styling for third-container3 */
+.third-container3 {
+	width:30%;
+    height: 100%
+    margin: 0;
+    display: block;
+    align-items: center;
+    justify-content: right;
+}
+
+.centered-image {
+    display: block;
+    margin: 0 auto;
+    width: 7vw;
+}
+
+.container-logo-1 {
+/* background-color: black;  Set the background color of the container to black */
+    width: 100%; /* Ensure the container takes full width of the viewport */
+    display: flex; /* Use flexbox to align the child img element */
+    justify-content: center; /* Center the img element horizontally */
+}
+
+.container-logo-1 img {
+    width: 30%; /* Set the image width to 10% of its container, which is the viewport */
+    height: auto; /* Maintain the aspect ratio of the image */
+}
+
+.container-logo {
+/* background-color: black;  Set the background color of the container to black */
+    width: 100%; /* Ensure the container takes full width of the viewport */
+    display: flex; /* Use flexbox to align the child img element */
+    justify-content: center; /* Center the img element horizontally */
+}
+
+.container-logo img {
+    width: 7%; /* Set the image width to 10% of its container, which is the viewport */
+    height: auto; /* Maintain the aspect ratio of the image */
+}
+
+.side-image {
+    width: 30%; /* Ensure the container takes full width of the viewport */
+    display: block; /* Use flexbox to align the child img element */
+    justify-content: left; /* Center the img element horizontally */
+}
+
+.rightside-image {
+    width: 50vw; /* Ensure the container takes full width of the viewport */
+    float: right;
+}
+
+.leftside-content {
+width: 50vw;
+float: left;
+}
+
+.leftrIght-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Handles 2 columns in the first row */
+    gap: 20px; /* Space between the columns and rows */
+    max-width: 900px; /* Maximum width of the grid */
+    margin: auto; /* Center the grid horizontally */
+    padding: 40px;
+}
+
+/* Meet the team */
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Handles 4 columns in the first row */
+    gap: 20px; /* Space between the columns and rows */
+    max-width: 1200px; /* Maximum width of the grid */
+    margin: auto; /* Center the grid horizontally */
+    padding: 20px;
+}
+.team-container .profile:nth-last-child(-n+3) { /* Last 3 profiles for second row */
+    grid-column: span 1; /* Each takes up only one fraction of the space */
+}
+.profile {
+    text-align: center; /* Center-aligns the text within each profile */
+}
+.profile img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular images */
+}
+.name {
+    font-size: 20px; /* Larger font size for the name */
+    color: #333; /* Dark grey color for text */
+    margin-top: 10px; /* Space between image and name */
+}
+
+.description {
+    font-size: 16px; /* Size of the description text */
+    color: #666; /* Lighter grey color for text */
+    margin-top: 5px; /* Space between name and description */
+}

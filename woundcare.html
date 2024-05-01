@@ -1,344 +1,1047 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js">
     <head>
-        <title> RHL-BEADLE  |  Remote Hub Lab </title>
+        <title>RHL-WOUNDCARE  |  Remote Hub Lab </title>
         <meta charset="utf-8">
         <meta name="description" content="For remote engineering, virtualization and equitable access to educational technologies">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <meta name='robots' content='max-image-preview:large'/>
+        <link rel='dns-prefetch' href='//fonts.googleapis.com'/>
+        <link rel="alternate" type="application/rss+xml" title="Remote Hub Lab &raquo; Feed" href="https://rhlab.ece.uw.edu/feed/"/>
+        <link rel="alternate" type="application/rss+xml" title="Remote Hub Lab &raquo; Comments Feed" href="https://rhlab.ece.uw.edu/comments/feed/"/>
+        <meta property="og:image" content="http://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/10/2019/06/21094817/Univ-of-Washington_Memorial-Way.jpg"/>
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:site" content="@uw"/>
+        <meta name="twitter:creator" content="@uw"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta property="og:title" content="RHL-WOUNDCARE"/>
+        <meta property="og:url" content="https://rhlab.ece.uw.edu/projects/rhl-woundcare/"/>
+        <meta property="og:site_name" content="Remote Hub Lab"/>
+        <meta property="og:description" content="RHL-WOUNDCARE Logo by Florence Atienza
+"/>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            window._wpemojiSettings = {
+                "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/",
+                "ext": ".png",
+                "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/",
+                "svgExt": ".svg",
+                "source": {
+                    "concatemoji": "https:\/\/rhlab.ece.uw.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5.2"
+                }
+            };
+            /*! This file is auto-generated */
+            !function(i, n) {
+                var o, s, e;
+                function c(e) {
+                    try {
+                        var t = {
+                            supportTests: e,
+                            timestamp: (new Date).valueOf()
+                        };
+                        sessionStorage.setItem(o, JSON.stringify(t))
+                    } catch (e) {}
+                }
+                function p(e, t, n) {
+                    e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+                    e.fillText(t, 0, 0);
+                    var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)
+                      , r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+                    e.fillText(n, 0, 0),
+                    new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data));
+                    return t.every(function(e, t) {
+                        return e === r[t]
+                    })
+                }
+                function u(e, t, n) {
+                    switch (t) {
+                    case "flag":
+                        return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");
+                    case "emoji":
+                        return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b")
+                    }
+                    return !1
+                }
+                function f(e, t, n) {
+                    var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300,150) : i.createElement("canvas")
+                      , a = r.getContext("2d", {
+                        willReadFrequently: !0
+                    })
+                      , o = (a.textBaseline = "top",
+                    a.font = "600 32px Arial",
+                    {});
+                    return e.forEach(function(e) {
+                        o[e] = t(a, e, n)
+                    }),
+                    o
+                }
+                function t(e) {
+                    var t = i.createElement("script");
+                    t.src = e,
+                    t.defer = !0,
+                    i.head.appendChild(t)
+                }
+                "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports",
+                s = ["flag", "emoji"],
+                n.supports = {
+                    everything: !0,
+                    everythingExceptFlag: !0
+                },
+                e = new Promise(function(e) {
+                    i.addEventListener("DOMContentLoaded", e, {
+                        once: !0
+                    })
+                }
+                ),
+                new Promise(function(t) {
+                    var n = function() {
+                        try {
+                            var e = JSON.parse(sessionStorage.getItem(o));
+                            if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests)
+                                return e.supportTests
+                        } catch (e) {}
+                        return null
+                    }();
+                    if (!n) {
+                        if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob)
+                            try {
+                                var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));"
+                                  , r = new Blob([e],{
+                                    type: "text/javascript"
+                                })
+                                  , a = new Worker(URL.createObjectURL(r),{
+                                    name: "wpTestEmojiSupports"
+                                });
+                                return void (a.onmessage = function(e) {
+                                    c(n = e.data),
+                                    a.terminate(),
+                                    t(n)
+                                }
+                                )
+                            } catch (e) {}
+                        c(n = f(s, u, p))
+                    }
+                    t(n)
+                }
+                ).then(function(e) {
+                    for (var t in e)
+                        n.supports[t] = e[t],
+                        n.supports.everything = n.supports.everything && n.supports[t],
+                        "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]);
+                    n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag,
+                    n.DOMReady = !1,
+                    n.readyCallback = function() {
+                        n.DOMReady = !0
+                    }
+                }).then(function() {
+                    return e
+                }).then(function() {
+                    var e;
+                    n.supports.everything || (n.readyCallback(),
+                    (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji),
+                    t(e.wpemoji)))
+                }))
+            }((window,
+            document), window._wpemojiSettings);
+            /* ]]> */
+        </script>
+        <style id='wp-emoji-styles-inline-css' type='text/css'>
+            img.wp-smiley, img.emoji {
+                display: inline !important;
+                border: none !important;
+                box-shadow: none !important;
+                height: 1em !important;
+                width: 1em !important;
+                margin: 0 0.07em !important;
+                vertical-align: -0.1em !important;
+                background: none !important;
+                padding: 0 !important;
+            }
+        </style>
+        <link rel='stylesheet' id='wp-block-library-css' href='https://rhlab.ece.uw.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.5.2' type='text/css' media='all'/>
+        <style id='classic-theme-styles-inline-css' type='text/css'>
+            /*! This file is auto-generated */
+            .wp-block-button__link {
+                color: #fff;
+                background-color: #32373c;
+                border-radius: 9999px;
+                box-shadow: none;
+                text-decoration: none;
+                padding: calc(.667em + 2px) calc(1.333em + 2px);
+                font-size: 1.125em
+            }
 
-        <meta name='robots' content='max-image-preview:large' />
-<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-<link rel="alternate" type="application/rss+xml" title="Remote Hub Lab &raquo; Feed" href="https://rhlab.ece.uw.edu/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Remote Hub Lab &raquo; Comments Feed" href="https://rhlab.ece.uw.edu/comments/feed/" />
-<meta property="og:image" content="http://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/10/2019/06/21094817/Univ-of-Washington_Memorial-Way.jpg" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@uw" />
-<meta name="twitter:creator" content="@uw" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="og:title" content="RHL-BEADLE" />
-<meta property="og:url" content="https://rhlab.ece.uw.edu/projects/rhl-beadle/" />
-<meta property="og:site_name" content="Remote Hub Lab" />
-<meta property="og:description" content="RHL-BEADLE Logo by Florence Atienza
-" />
+            .wp-block-file__button {
+                background: #32373c;
+                color: #fff;
+                text-decoration: none
+            }
+        </style>
+        <style id='global-styles-inline-css' type='text/css'>
+            body {
+                --wp--preset--color--black: #000000;
+                --wp--preset--color--cyan-bluish-gray: #abb8c3;
+                --wp--preset--color--white: #ffffff;
+                --wp--preset--color--pale-pink: #f78da7;
+                --wp--preset--color--vivid-red: #cf2e2e;
+                --wp--preset--color--luminous-vivid-orange: #ff6900;
+                --wp--preset--color--luminous-vivid-amber: #fcb900;
+                --wp--preset--color--light-green-cyan: #7bdcb5;
+                --wp--preset--color--vivid-green-cyan: #00d084;
+                --wp--preset--color--pale-cyan-blue: #8ed1fc;
+                --wp--preset--color--vivid-cyan-blue: #0693e3;
+                --wp--preset--color--vivid-purple: #9b51e0;
+                --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);
+                --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);
+                --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);
+                --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);
+                --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);
+                --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);
+                --wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);
+                --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);
+                --wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);
+                --wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);
+                --wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);
+                --wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);
+                --wp--preset--font-size--small: 13px;
+                --wp--preset--font-size--medium: 20px;
+                --wp--preset--font-size--large: 36px;
+                --wp--preset--font-size--x-large: 42px;
+                --wp--preset--spacing--20: 0.44rem;
+                --wp--preset--spacing--30: 0.67rem;
+                --wp--preset--spacing--40: 1rem;
+                --wp--preset--spacing--50: 1.5rem;
+                --wp--preset--spacing--60: 2.25rem;
+                --wp--preset--spacing--70: 3.38rem;
+                --wp--preset--spacing--80: 5.06rem;
+                --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+                --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+                --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+                --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+                --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+            }
 
-      
-<script type="text/javascript">
-/* <![CDATA[ */
-window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/rhlab.ece.uw.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.2"}};
-/*! This file is auto-generated */
-!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
-/* ]]> */
-</script>
-<style id='wp-emoji-styles-inline-css' type='text/css'>
+            :where(.is-layout-flex) {
+                gap: 0.5em;
+            }
 
-	img.wp-smiley, img.emoji {
-		display: inline !important;
-		border: none !important;
-		box-shadow: none !important;
-		height: 1em !important;
-		width: 1em !important;
-		margin: 0 0.07em !important;
-		vertical-align: -0.1em !important;
-		background: none !important;
-		padding: 0 !important;
-	}
-</style>
-<link rel='stylesheet' id='wp-block-library-css' href='https://rhlab.ece.uw.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.4.2' type='text/css' media='all' />
-<style id='classic-theme-styles-inline-css' type='text/css'>
-/*! This file is auto-generated */
-.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
-</style>
-<style id='global-styles-inline-css' type='text/css'>
-body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
-.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
-:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
-:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
-.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
-</style>
-<link rel='stylesheet' id='uw-master-css' href='https://rhlab.ece.uw.edu/wp-content/themes/uw-2014-modded/style.css?ver=3.0.1' type='text/css' media='all' />
-<link rel='stylesheet' id='google-font-open-css' href='https://fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C700italic%2C400%2C700&#038;ver=3.6' type='text/css' media='all' />
-<script type="text/javascript" src="https://rhlab.ece.uw.edu/wp-includes/js/underscore.min.js?ver=1.13.4" id="underscore-js"></script>
-<script type="text/javascript" src="https://rhlab.ece.uw.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
-<script type="text/javascript" id="jquery-core-js-after">
-/* <![CDATA[ */
-$ = jQuery;
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://rhlab.ece.uw.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
-<script type="text/javascript" src="https://rhlab.ece.uw.edu/wp-includes/js/backbone.min.js?ver=1.5.0" id="backbone-js"></script>
-<script type="text/javascript" id="site-js-extra">
-/* <![CDATA[ */
-var style_dir = ["https:\/\/rhlab.ece.uw.edu"];
-var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/rhlab.ece.uw.edu\/wp-admin\/admin-ajax.php","nonce":"e92d30aab7","display_exif":"1","display_geo":"","background_color":"white","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","require_name_email":"1","login_url":"https:\/\/rhlab.ece.uw.edu\/wp-login.php?redirect_to=https%3A%2F%2Frhlab.ece.uw.edu%2Fprojects%2Frhl-beadle%2F"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://rhlab.ece.uw.edu/wp-content/themes/uw-2014-modded/js/site.js?ver=3.0.1" id="site-js"></script>
-<link rel="https://api.w.org/" href="https://rhlab.ece.uw.edu/wp-json/" /><link rel="alternate" type="application/json" href="https://rhlab.ece.uw.edu/wp-json/wp/v2/pages/375" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://rhlab.ece.uw.edu/xmlrpc.php?rsd" />
-<meta name="generator" content="WordPress 6.4.2" />
-<link rel="canonical" href="https://rhlab.ece.uw.edu/projects/rhl-beadle/" />
-<link rel='shortlink' href='https://rhlab.ece.uw.edu/?p=375' />
-<link rel="alternate" type="application/json+oembed" href="https://rhlab.ece.uw.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Frhlab.ece.uw.edu%2Fprojects%2Frhl-beadle%2F" />
-<link rel="alternate" type="text/xml+oembed" href="https://rhlab.ece.uw.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Frhlab.ece.uw.edu%2Fprojects%2Frhl-beadle%2F&#038;format=xml" />
-<script src='https://wp.ece.uw.edu/?dm=e02f55419df9afb7279c908ba0a320aa&amp;action=load&amp;blogid=26&amp;siteid=1&amp;t=1115624339&amp;back=https%3A%2F%2Frhlab.ece.uw.edu%2Fprojects%2Frhl-beadle%2F' type='text/javascript'></script>
-        
+            :where(.is-layout-grid) {
+                gap: 0.5em;
+            }
+
+            body .is-layout-flow > .alignleft {
+                float: left;
+                margin-inline-start: 0;margin-inline-end: 2em;}
+
+            body .is-layout-flow > .alignright {
+                float: right;
+                margin-inline-start: 2em;margin-inline-end: 0;}
+
+            body .is-layout-flow > .aligncenter {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            body .is-layout-constrained > .alignleft {
+                float: left;
+                margin-inline-start: 0;margin-inline-end: 2em;}
+
+            body .is-layout-constrained > .alignright {
+                float: right;
+                margin-inline-start: 2em;margin-inline-end: 0;}
+
+            body .is-layout-constrained > .aligncenter {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+                max-width: var(--wp--style--global--content-size);
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            body .is-layout-constrained > .alignwide {
+                max-width: var(--wp--style--global--wide-size);
+            }
+
+            body .is-layout-flex {
+                display: flex;
+            }
+
+            body .is-layout-flex {
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            body .is-layout-flex > * {
+                margin: 0;
+            }
+
+            body .is-layout-grid {
+                display: grid;
+            }
+
+            body .is-layout-grid > * {
+                margin: 0;
+            }
+
+            :where(.wp-block-columns.is-layout-flex) {
+                gap: 2em;
+            }
+
+            :where(.wp-block-columns.is-layout-grid) {
+                gap: 2em;
+            }
+
+            :where(.wp-block-post-template.is-layout-flex) {
+                gap: 1.25em;
+            }
+
+            :where(.wp-block-post-template.is-layout-grid) {
+                gap: 1.25em;
+            }
+
+            .has-black-color {
+                color: var(--wp--preset--color--black) !important;
+            }
+
+            .has-cyan-bluish-gray-color {
+                color: var(--wp--preset--color--cyan-bluish-gray) !important;
+            }
+
+            .has-white-color {
+                color: var(--wp--preset--color--white) !important;
+            }
+
+            .has-pale-pink-color {
+                color: var(--wp--preset--color--pale-pink) !important;
+            }
+
+            .has-vivid-red-color {
+                color: var(--wp--preset--color--vivid-red) !important;
+            }
+
+            .has-luminous-vivid-orange-color {
+                color: var(--wp--preset--color--luminous-vivid-orange) !important;
+            }
+
+            .has-luminous-vivid-amber-color {
+                color: var(--wp--preset--color--luminous-vivid-amber) !important;
+            }
+
+            .has-light-green-cyan-color {
+                color: var(--wp--preset--color--light-green-cyan) !important;
+            }
+
+            .has-vivid-green-cyan-color {
+                color: var(--wp--preset--color--vivid-green-cyan) !important;
+            }
+
+            .has-pale-cyan-blue-color {
+                color: var(--wp--preset--color--pale-cyan-blue) !important;
+            }
+
+            .has-vivid-cyan-blue-color {
+                color: var(--wp--preset--color--vivid-cyan-blue) !important;
+            }
+
+            .has-vivid-purple-color {
+                color: var(--wp--preset--color--vivid-purple) !important;
+            }
+
+            .has-black-background-color {
+                background-color: var(--wp--preset--color--black) !important;
+            }
+
+            .has-cyan-bluish-gray-background-color {
+                background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+            }
+
+            .has-white-background-color {
+                background-color: var(--wp--preset--color--white) !important;
+            }
+
+            .has-pale-pink-background-color {
+                background-color: var(--wp--preset--color--pale-pink) !important;
+            }
+
+            .has-vivid-red-background-color {
+                background-color: var(--wp--preset--color--vivid-red) !important;
+            }
+
+            .has-luminous-vivid-orange-background-color {
+                background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+            }
+
+            .has-luminous-vivid-amber-background-color {
+                background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+            }
+
+            .has-light-green-cyan-background-color {
+                background-color: var(--wp--preset--color--light-green-cyan) !important;
+            }
+
+            .has-vivid-green-cyan-background-color {
+                background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+            }
+
+            .has-pale-cyan-blue-background-color {
+                background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+            }
+
+            .has-vivid-cyan-blue-background-color {
+                background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+            }
+
+            .has-vivid-purple-background-color {
+                background-color: var(--wp--preset--color--vivid-purple) !important;
+            }
+
+            .has-black-border-color {
+                border-color: var(--wp--preset--color--black) !important;
+            }
+
+            .has-cyan-bluish-gray-border-color {
+                border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+            }
+
+            .has-white-border-color {
+                border-color: var(--wp--preset--color--white) !important;
+            }
+
+            .has-pale-pink-border-color {
+                border-color: var(--wp--preset--color--pale-pink) !important;
+            }
+
+            .has-vivid-red-border-color {
+                border-color: var(--wp--preset--color--vivid-red) !important;
+            }
+
+            .has-luminous-vivid-orange-border-color {
+                border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+            }
+
+            .has-luminous-vivid-amber-border-color {
+                border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+            }
+
+            .has-light-green-cyan-border-color {
+                border-color: var(--wp--preset--color--light-green-cyan) !important;
+            }
+
+            .has-vivid-green-cyan-border-color {
+                border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+            }
+
+            .has-pale-cyan-blue-border-color {
+                border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+            }
+
+            .has-vivid-cyan-blue-border-color {
+                border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+            }
+
+            .has-vivid-purple-border-color {
+                border-color: var(--wp--preset--color--vivid-purple) !important;
+            }
+
+            .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+                background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+            }
+
+            .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+                background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+            }
+
+            .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+                background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+            }
+
+            .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+                background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+            }
+
+            .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+                background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+            }
+
+            .has-cool-to-warm-spectrum-gradient-background {
+                background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+            }
+
+            .has-blush-light-purple-gradient-background {
+                background: var(--wp--preset--gradient--blush-light-purple) !important;
+            }
+
+            .has-blush-bordeaux-gradient-background {
+                background: var(--wp--preset--gradient--blush-bordeaux) !important;
+            }
+
+            .has-luminous-dusk-gradient-background {
+                background: var(--wp--preset--gradient--luminous-dusk) !important;
+            }
+
+            .has-pale-ocean-gradient-background {
+                background: var(--wp--preset--gradient--pale-ocean) !important;
+            }
+
+            .has-electric-grass-gradient-background {
+                background: var(--wp--preset--gradient--electric-grass) !important;
+            }
+
+            .has-midnight-gradient-background {
+                background: var(--wp--preset--gradient--midnight) !important;
+            }
+
+            .has-small-font-size {
+                font-size: var(--wp--preset--font-size--small) !important;
+            }
+
+            .has-medium-font-size {
+                font-size: var(--wp--preset--font-size--medium) !important;
+            }
+
+            .has-large-font-size {
+                font-size: var(--wp--preset--font-size--large) !important;
+            }
+
+            .has-x-large-font-size {
+                font-size: var(--wp--preset--font-size--x-large) !important;
+            }
+
+            .wp-block-navigation a:where(:not(.wp-element-button)) {
+                color: inherit;
+            }
+
+            :where(.wp-block-post-template.is-layout-flex) {
+                gap: 1.25em;
+            }
+
+            :where(.wp-block-post-template.is-layout-grid) {
+                gap: 1.25em;
+            }
+
+            :where(.wp-block-columns.is-layout-flex) {
+                gap: 2em;
+            }
+
+            :where(.wp-block-columns.is-layout-grid) {
+                gap: 2em;
+            }
+
+            .wp-block-pullquote {
+                font-size: 1.5em;
+                line-height: 1.6;
+            }
+        </style>
+        <link rel='stylesheet' id='uw-master-css' href='https://rhlab.ece.uw.edu/wp-content/themes/uw-2014-modded/style.css?ver=3.0.1' type='text/css' media='all'/>
+        <link rel='stylesheet' id='google-font-open-css' href='https://fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C700italic%2C400%2C700&#038;ver=3.6' type='text/css' media='all'/>
+        <script type="text/javascript" src="https://rhlab.ece.uw.edu/wp-includes/js/underscore.min.js?ver=1.13.4" id="underscore-js"></script>
+        <script type="text/javascript" src="https://rhlab.ece.uw.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+        <script type="text/javascript" id="jquery-core-js-after">
+            /* <![CDATA[ */
+            $ = jQuery;
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="https://rhlab.ece.uw.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+        <script type="text/javascript" src="https://rhlab.ece.uw.edu/wp-includes/js/backbone.min.js?ver=1.5.0" id="backbone-js"></script>
+        <script type="text/javascript" id="site-js-extra">
+            /* <![CDATA[ */
+            var style_dir = ["https:\/\/rhlab.ece.uw.edu"];
+            var jetpackCarouselStrings = {
+                "widths": [370, 700, 1000, 1200, 1400, 2000],
+                "is_logged_in": "",
+                "lang": "en",
+                "ajaxurl": "https:\/\/rhlab.ece.uw.edu\/wp-admin\/admin-ajax.php",
+                "nonce": "92645b55a3",
+                "display_exif": "1",
+                "display_geo": "",
+                "background_color": "white",
+                "download_original": "View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>",
+                "camera": "Camera",
+                "aperture": "Aperture",
+                "shutter_speed": "Shutter Speed",
+                "focal_length": "Focal Length",
+                "require_name_email": "1",
+                "login_url": "https:\/\/rhlab.ece.uw.edu\/wp-login.php?redirect_to=https%3A%2F%2Frhlab.ece.uw.edu%2Fprojects%2Frhl-woundcare%2F"
+            };
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="https://rhlab.ece.uw.edu/wp-content/themes/uw-2014-modded/js/site.js?ver=3.0.1" id="site-js"></script>
+        <link rel="https://api.w.org/" href="https://rhlab.ece.uw.edu/wp-json/"/>
+        <link rel="alternate" type="application/json" href="https://rhlab.ece.uw.edu/wp-json/wp/v2/pages/375"/>
+        <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://rhlab.ece.uw.edu/xmlrpc.php?rsd"/>
+        <meta name="generator" content="WordPress 6.5.2"/>
+        <link rel="canonical" href="https://rhlab.ece.uw.edu/projects/rhl-woundcare/"/>
+        <link rel='shortlink' href='https://rhlab.ece.uw.edu/?p=375'/>
+        <link rel="alternate" type="application/json+oembed" href="https://rhlab.ece.uw.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Frhlab.ece.uw.edu%2Fprojects%2Frhl-woundcare%2F"/>
+        <link rel="alternate" type="text/xml+oembed" href="https://rhlab.ece.uw.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Frhlab.ece.uw.edu%2Fprojects%2Frhl-woundcare%2F&#038;format=xml"/>
+        <script src='https://wp.ece.uw.edu/?dm=e02f55419df9afb7279c908ba0a320aa&amp;action=load&amp;blogid=26&amp;siteid=1&amp;t=1301045426&amp;back=https%3A%2F%2Frhlab.ece.uw.edu%2Fprojects%2Frhl-woundcare%2F' type='text/javascript'></script>
+        <!--[if lt IE 9]>
+            <script src="https://rhlab.ece.uw.edu/wp-content/themes/uw-2014-modded/assets/ie/js/html5shiv.js" type="text/javascript"></script>
+            <script src="https://rhlab.ece.uw.edu/wp-content/themes/uw-2014-modded/assets/ie/js/respond.js" type="text/javascript"></script>
+            <link rel='stylesheet' href='https://rhlab.ece.uw.edu/wp-content/themes/uw-2014-modded/assets/ie/css/ie.css' type='text/css' media='all' />
+        <![endif]-->
     </head>
     <!--[if lt IE 9]> <body class="page-template-default page page-id-375 page-child parent-pageid-370 lt-ie9 site-"> <![endif]-->
     <!--[if gt IE 8]><!-->
-    <body class="page-template-default page page-id-375 page-child parent-pageid-370 site-" >
-    <!--<![endif]-->
-
-    <div id="uwsearcharea" aria-hidden="true" class="uw-search-bar-container"></div>
-
-    <a id="main-content" href="#main_content" class="screen-reader-shortcut">Skip to main content</a>
-
-    <div id="uw-container">
-        
-	<nav id="quicklinks" aria-label="quick links" aria-hidden="true">
-    <ul id="big-links"> 
-        <li><span class="icon-myuw"></span><a href="http://my.uw.edu" tabindex="-1">MyUW</a></li> 
-        <li><span class="icon-calendar"></span><a href="http://uw.edu/calendar" tabindex="-1">Calendar</a></li> 
-        <li><span class="icon-directories"></span><a href="http://uw.edu/directory/" tabindex="-1">Directories</a></li> 
-        <li><span class="icon-libraries"></span><a href="http://www.lib.washington.edu/" tabindex="-1">Libraries</a></li> 
-        <li><span class="icon-medicine"></span><a href="http://www.uwmedicine.org" tabindex="-1">UW Medicine</a></li> 
-        <li><span class="icon-maps"></span><a href="http://uw.edu/maps" tabindex="-1">Maps</a></li> 
-        <li><span class="icon-uwtoday"></span><a href="http://uw.edu/news" tabindex="-1">UW Today</a></li>
-    </ul>
-        
-    <h3>Helpful Links</h3>
-    <ul id="little-links">
-        <li><span class="false"></span><a href="http://itconnect.uw.edu" tabindex="-1">Computing/IT</a></li> 
-        <li><span class="false"></span><a href="http://isc.uw.edu/" tabindex="-1">Employee Self Service</a></li> 
-        <li><span class="false"></span><a href="http://hfs.uw.edu/Husky-Card-Services/" tabindex="-1">Husky Card</a></li> 
-        <li><span class="false"></span><a href="http://www.uwb.edu/" tabindex="-1">UW Bothell</a></li> 
-        <li><span class="false"></span><a href="http://www.tacoma.uw.edu/" tabindex="-1">UW Tacoma</a></li> 
-        <li><span class="false"></span><a href="https://www.facebook.com/UofWA" tabindex="-1">UW Facebook</a></li> 
-        <li><span class="false"></span><a href="https://twitter.com/UW" tabindex="-1">UW Twitter</a></li>
-    </ul>
-</nav>
-
-    <div id="uw-container-inner">
-
-
-    <header class="uw-thinstrip" role="banner">
-
-  <div class="container">
-    <a href="http://uw.edu" title="University of Washington Home">
-      <div class="uw-patch">University of Washington</div>
-      <div class="uw-wordmark">University of Washington</div>
-    </a>
-  </div>
-  <div class='align-right'>
-      <nav class="uw-thin-strip-nav" aria-label='audience menu'>
-          <ul class="uw-thin-links">
-            <li><a href="http://uw.edu/studentlife" title="Students">Students</a></li>
-            <li><a href="http://uw.edu/parents" title="Parents">Parents</a></li>
-            <li><a href="http://uw.edu/facultystaff" title="Faculty & Staff">Faculty & Staff</a></li>
-            <li><a href="http://uw.edu/alumni" title="Alumni">Alumni</a></li>
-          </ul>
-      </nav>
-      <nav id='search-quicklinks' aria-label='search and quick links'>
-      <button class='uw-search' aria-owns='uwsearcharea' aria-controls='uwsearcharea' aria-expanded='false' aria-label='Search UW' aria-haspopup='true'>
-<!--[if gt IE 8]><!-->
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-               width="19px" height="51px" viewBox="0 0 18.776 51.062" enable-background="new 0 0 18.776 51.062" xml:space="preserve" focusable="false">
-          <g>
-              <path fill="#FFFFFF" d="M3.537,7.591C3.537,3.405,6.94,0,11.128,0c4.188,0,7.595,3.406,7.595,7.591
+    <body class="page-template-default page page-id-375 page-child parent-pageid-370 site-">
+        <!--<![endif]-->
+        <div id="uwsearcharea" aria-hidden="true" class="uw-search-bar-container"></div>
+        <a id="main-content" href="#main_content" class="screen-reader-shortcut">Skip to main content</a>
+        <div id="uw-container">
+            <nav id="quicklinks" aria-label="quick links" aria-hidden="true">
+                <ul id="big-links">
+                    <li>
+                        <span class="icon-myuw"></span>
+                        <a href="http://my.uw.edu" tabindex="-1">MyUW</a>
+                    </li>
+                    <li>
+                        <span class="icon-calendar"></span>
+                        <a href="http://uw.edu/calendar" tabindex="-1">Calendar</a>
+                    </li>
+                    <li>
+                        <span class="icon-directories"></span>
+                        <a href="http://uw.edu/directory/" tabindex="-1">Directories</a>
+                    </li>
+                    <li>
+                        <span class="icon-libraries"></span>
+                        <a href="http://www.lib.washington.edu/" tabindex="-1">Libraries</a>
+                    </li>
+                    <li>
+                        <span class="icon-medicine"></span>
+                        <a href="http://www.uwmedicine.org" tabindex="-1">UW Medicine</a>
+                    </li>
+                    <li>
+                        <span class="icon-maps"></span>
+                        <a href="http://uw.edu/maps" tabindex="-1">Maps</a>
+                    </li>
+                    <li>
+                        <span class="icon-uwtoday"></span>
+                        <a href="http://uw.edu/news" tabindex="-1">UW Today</a>
+                    </li>
+                </ul>
+                <h3>Helpful Links</h3>
+                <ul id="little-links">
+                    <li>
+                        <span class="false"></span>
+                        <a href="http://itconnect.uw.edu" tabindex="-1">Computing/IT</a>
+                    </li>
+                    <li>
+                        <span class="false"></span>
+                        <a href="http://isc.uw.edu/" tabindex="-1">Employee Self Service</a>
+                    </li>
+                    <li>
+                        <span class="false"></span>
+                        <a href="http://hfs.uw.edu/Husky-Card-Services/" tabindex="-1">Husky Card</a>
+                    </li>
+                    <li>
+                        <span class="false"></span>
+                        <a href="http://www.uwb.edu/" tabindex="-1">UW Bothell</a>
+                    </li>
+                    <li>
+                        <span class="false"></span>
+                        <a href="http://www.tacoma.uw.edu/" tabindex="-1">UW Tacoma</a>
+                    </li>
+                    <li>
+                        <span class="false"></span>
+                        <a href="https://www.facebook.com/UofWA" tabindex="-1">UW Facebook</a>
+                    </li>
+                    <li>
+                        <span class="false"></span>
+                        <a href="https://twitter.com/UW" tabindex="-1">UW Twitter</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="uw-container-inner">
+                <header class="uw-thinstrip" role="banner">
+                    <div class="container">
+                        <a href="http://uw.edu" title="University of Washington Home">
+                            <div class="uw-patch">University of Washington</div>
+                            <div class="uw-wordmark">University of Washington</div>
+                        </a>
+                    </div>
+                    <div class='align-right'>
+                        <nav class="uw-thin-strip-nav" aria-label='audience menu'>
+                            <ul class="uw-thin-links">
+                                <li>
+                                    <a href="http://uw.edu/studentlife" title="Students">Students</a>
+                                </li>
+                                <li>
+                                    <a href="http://uw.edu/parents" title="Parents">Parents</a>
+                                </li>
+                                <li>
+                                    <a href="http://uw.edu/facultystaff" title="Faculty & Staff">Faculty & Staff</a>
+                                </li>
+                                <li>
+                                    <a href="http://uw.edu/alumni" title="Alumni">Alumni</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav id='search-quicklinks' aria-label='search and quick links'>
+                            <button class='uw-search' aria-owns='uwsearcharea' aria-controls='uwsearcharea' aria-expanded='false' aria-label='Search UW' aria-haspopup='true'>
+                                <!--[if gt IE 8]><!-->
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19px" height="51px" viewBox="0 0 18.776 51.062" enable-background="new 0 0 18.776 51.062" xml:space="preserve" focusable="false">
+                                    <g>
+                                        <path fill="#FFFFFF" d="M3.537,7.591C3.537,3.405,6.94,0,11.128,0c4.188,0,7.595,3.406,7.595,7.591
                 c0,4.187-3.406,7.593-7.595,7.593C6.94,15.185,3.537,11.778,3.537,7.591z M5.245,7.591c0,3.246,2.643,5.885,5.884,5.885
                 c3.244,0,5.89-2.64,5.89-5.885c0-3.245-2.646-5.882-5.89-5.882C7.883,1.71,5.245,4.348,5.245,7.591z"/>
-
-              <rect x="2.418" y="11.445" transform="matrix(0.7066 0.7076 -0.7076 0.7066 11.7842 2.0922)" fill="#FFFFFF" width="1.902" height="7.622"/>
-          </g>
-          <path fill="#FFFFFF" d="M3.501,47.864c0.19,0.194,0.443,0.29,0.694,0.29c0.251,0,0.502-0.096,0.695-0.29l5.691-5.691l5.692,5.691
+                                        <rect x="2.418" y="11.445" transform="matrix(0.7066 0.7076 -0.7076 0.7066 11.7842 2.0922)" fill="#FFFFFF" width="1.902" height="7.622"/>
+                                    </g>
+                                    <path fill="#FFFFFF" d="M3.501,47.864c0.19,0.194,0.443,0.29,0.694,0.29c0.251,0,0.502-0.096,0.695-0.29l5.691-5.691l5.692,5.691
               c0.192,0.194,0.443,0.29,0.695,0.29c0.25,0,0.503-0.096,0.694-0.29c0.385-0.382,0.385-1.003,0-1.388l-5.692-5.691l5.692-5.692
               c0.385-0.385,0.385-1.005,0-1.388c-0.383-0.385-1.004-0.385-1.389,0l-5.692,5.691L4.89,33.705c-0.385-0.385-1.006-0.385-1.389,0
               c-0.385,0.383-0.385,1.003,0,1.388l5.692,5.692l-5.692,5.691C3.116,46.861,3.116,47.482,3.501,47.864z"/>
-          </svg>
-<!--<![endif]-->
-      </button>
-      <button class='uw-quicklinks' aria-haspopup='true' aria-expanded="false" aria-label="quick links">Quick Links<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15.63px" height="69.13px" viewBox="0 0 15.63 69.13" enable-background="new 0 0 15.63 69.13" xml:space="preserve" focusable="false"><polygon fill="#FFFFFF" points="12.8,7.776 12.803,7.773 5.424,0 3.766,1.573 9.65,7.776 3.766,13.98 5.424,15.553 12.803,7.78"/><polygon fill="#FFFFFF" points="9.037,61.351 9.036,61.351 14.918,55.15 13.26,53.577 7.459,59.689 1.658,53.577 0,55.15 5.882,61.351 5.882,61.351 5.884,61.353 0,67.557 1.658,69.13 7.459,63.019 13.26,69.13 14.918,67.557 9.034,61.353"/></svg></button>
-      </nav>
-  </div>
+                                </svg>
+                                <!--<![endif]-->
+                            </button>
+                            <button class='uw-quicklinks' aria-haspopup='true' aria-expanded="false" aria-label="quick links">
+                                Quick Links
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15.63px" height="69.13px" viewBox="0 0 15.63 69.13" enable-background="new 0 0 15.63 69.13" xml:space="preserve" focusable="false">
+                                    <polygon fill="#FFFFFF" points="12.8,7.776 12.803,7.773 5.424,0 3.766,1.573 9.65,7.776 3.766,13.98 5.424,15.553 12.803,7.78"/>
+                                    <polygon fill="#FFFFFF" points="9.037,61.351 9.036,61.351 14.918,55.15 13.26,53.577 7.459,59.689 1.658,53.577 0,55.15 5.882,61.351 5.882,61.351 5.884,61.353 0,67.557 1.658,69.13 7.459,63.019 13.26,69.13 14.918,67.557 9.034,61.353"/>
+                                </svg>
+                            </button>
+                        </nav>
+                    </div>
+                </header>
+                <nav id="dawgdrops" aria-label="Main menu">
+                    <div class="dawgdrops-inner container">
+                        <ul id="menu-dropdowns" class="dawgdrops-nav">
+                            <li class="dawgdrops-item">
+                                <a title="						" href="https://rhlab.ece.uw.edu/" title="Home" id="home">Home</a>
+                            </li>
+                            <li class="dawgdrops-item">
+                                <a title="						" href="https://rhlab.ece.uw.edu/people/" title="People" id="544">People</a>
+                            </li>
+                            <li class="dawgdrops-item">
+                                <a title="						" href="https://rhlab.ece.uw.edu/about/" title="About" id="577">About</a>
+                            </li>
+                            <li class="dawgdrops-item">
+                                <a title="						" href="https://rhlab.ece.uw.edu/labs/" title="Labs" id="575">Labs</a>
+                            </li>
+                            <li class="dawgdrops-item">
+                                <a title="						" href="https://rhlab.ece.uw.edu/projects/" class="dropdown-toggle" title="Projects" id="578">Projects</a>
+                                <button data-toggle="dropdown" aria-controls="menu-578" aria-labelledby="578">
+                                    <i class="icon-chevron-down"></i>
+                                </button>
+                                <ul role="group" id="menu-578" aria-labelledby='578' class="dawgdrops-menu">
+                                    <li>
+                                        <a title="						" href="https://rhlab.ece.uw.edu/projects/rhl-woundcare/" tabindex="-1" title="RHL-WOUNDCARE" id="579">RHL-WOUNDCARE</a>
+                                    </li>
+                                    <li>
+                                        <a title="						" href="https://rhlab.ece.uw.edu/projects/relia/" tabindex="-1" title="RELIA" id="580">RELIA</a>
+                                    </li>
+                                    <li>
+                                        <a title="						" href="https://rhlab.ece.uw.edu/projects/rhl-butterfly/" tabindex="-1" title="RHL-Butterfly" id="581">RHL-Butterfly</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://rhlab.ece.uw.edu/?page_id=700" tabindex="-1" title="RHL-Woundcare" id="712">RHL-Woundcare</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dawgdrops-item">
+                                <a title="						" href="https://rhlab.ece.uw.edu/news/" title="News" id="576">News</a>
+                            </li>
+                            <li class="dawgdrops-item">
+                                <a title="						" href="https://rhlab.ece.uw.edu/awards/" title="Awards" id="542">Awards</a>
+                            </li>
+                            <li class="dawgdrops-item">
+                                <a title="						" href="https://rhlab.ece.uw.edu/sponsors/" title="Sponsors" id="543">Sponsors</a>
+                            </li>
+                            <li class="dawgdrops-item">
+                                <a title="						" href="https://rhlab.ece.uw.edu/join-us/" title="Join Us" id="541">Join Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="uw-hero-image" style="background-image:url('https://ada.ece.uw.edu/wp-content/uploads/sites/26/2022/04/cropped-background-3.jpg');"></div>
+                <div class="container uw-body">
+                    <div class="row">
+                        <div class="col-md-12 uw-content" role='main'>
+                            <a href="https://rhlab.ece.uw.edu/" title="Remote Hub Lab">
+                                <div class="uw-site-title">Remote Hub Lab</div>
+                            </a>
+                            <nav id="mobile-relative" class="frontpage" aria-label="mobile menu">
+                                <button class="uw-mobile-menu-toggle">Menu</button>
+                                <ul class="uw-mobile-menu first-level">
+                                    <div class="menu-dropdowns-container">
+                                        <ul id="menu-dropdowns-1" class="">
+                                            <li id="menu-item-540" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-540">
+                                                <a title="						" href="https://rhlab.ece.uw.edu/">Home</a>
+                                            </li>
+                                            <li id="menu-item-544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-544">
+                                                <a title="						" href="https://rhlab.ece.uw.edu/people/">People</a>
+                                            </li>
+                                            <li id="menu-item-577" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-577">
+                                                <a title="						" href="https://rhlab.ece.uw.edu/about/">About</a>
+                                            </li>
+                                            <li id="menu-item-575" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-575">
+                                                <a title="						" href="https://rhlab.ece.uw.edu/labs/">Labs</a>
+                                            </li>
+                                            <li id="menu-item-578" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-578">
+                                                <a title="						" href="https://rhlab.ece.uw.edu/projects/">Projects</a>
+                                                <ul class="sub-menu">
+                                                    <li id="menu-item-579" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-375 current_page_item menu-item-579">
+                                                        <a title="						" href="https://rhlab.ece.uw.edu/projects/rhl-woundcare/" aria-current="page">RHL-WOUNDCARE</a>
+                                                    </li>
+                                                    <li id="menu-item-580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-580">
+                                                        <a title="						" href="https://rhlab.ece.uw.edu/projects/relia/">RELIA</a>
+                                                    </li>
+                                                    <li id="menu-item-581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-581">
+                                                        <a title="						" href="https://rhlab.ece.uw.edu/projects/rhl-butterfly/">RHL-Butterfly</a>
+                                                    </li>
+                                                    <li id="menu-item-712" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-712">
+                                                        <a href="https://rhlab.ece.uw.edu/?page_id=700">RHL-Woundcare</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li id="menu-item-576" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576">
+                                                <a title="						" href="https://rhlab.ece.uw.edu/news/">News</a>
+                                            </li>
+                                            <li id="menu-item-542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-542">
+                                                <a title="						" href="https://rhlab.ece.uw.edu/awards/">Awards</a>
+                                            </li>
+                                            <li id="menu-item-543" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-543">
+                                                <a title="						" href="https://rhlab.ece.uw.edu/sponsors/">Sponsors</a>
+                                            </li>
+                                            <li id="menu-item-541" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-541">
+                                                <a title="						" href="https://rhlab.ece.uw.edu/join-us/">Join Us</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </ul>
+                            </nav>
+                            <nav class='uw-breadcrumbs' aria-label='breadcrumbs'>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.ece.uw.edu" title="UWECE Home">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://rhlab.ece.uw.edu/" title="Remote Hub Lab">Remote Hub Lab</a>
+                                    <li>
+                                    <li class="current">
+                                        <a href="https://rhlab.ece.uw.edu/projects/" title="Projects">Projects</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div id='main_content' class="uw-body-copy" tabindex="-1">
 
-</header>
-
-    <nav id="dawgdrops" aria-label="Main menu"><div class="dawgdrops-inner container"><ul id="menu-dropdowns" class="dawgdrops-nav"><li class="dawgdrops-item"><a title="						" href="https://rhlab.ece.uw.edu/" title="Home"  id="home">Home</a></li>
-<li class="dawgdrops-item"><a title="						" href="https://rhlab.ece.uw.edu/people/" title="People"  id="544">People</a></li>
-<li class="dawgdrops-item"><a title="						" href="https://rhlab.ece.uw.edu/about/" title="About"  id="577">About</a></li>
-<li class="dawgdrops-item"><a title="						" href="https://rhlab.ece.uw.edu/labs/" title="Labs"  id="575">Labs</a></li>
-<li class="dawgdrops-item"><a title="						" href="https://rhlab.ece.uw.edu/projects/" class="dropdown-toggle" title="Projects"  id="578">Projects</a>
-<button data-toggle="dropdown" aria-controls="menu-578" aria-labelledby="578"><i class="icon-chevron-down"></i></button>
-<ul role="group" id="menu-578" aria-labelledby='578' class="dawgdrops-menu">
-	<li><a title="						" href="https://rhlab.ece.uw.edu/projects/rhl-beadle/" tabindex="-1"  title="RHL-BEADLE"  id="579">RHL-BEADLE</a></li>
-	<li><a title="						" href="https://rhlab.ece.uw.edu/projects/relia/" tabindex="-1"  title="RELIA"  id="580">RELIA</a></li>
-	<li><a title="						" href="https://rhlab.ece.uw.edu/projects/rhl-butterfly/" tabindex="-1"  title="RHL-Butterfly"  id="581">RHL-Butterfly</a></li>
-	<li><a href="https://rhlab.ece.uw.edu/?page_id=700" tabindex="-1"  title="RHL-Woundcare"  id="712">RHL-Woundcare</a></li>
-</ul>
-</li>
-<li class="dawgdrops-item"><a title="						" href="https://rhlab.ece.uw.edu/news/" title="News"  id="576">News</a></li>
-<li class="dawgdrops-item"><a title="						" href="https://rhlab.ece.uw.edu/awards/" title="Awards"  id="542">Awards</a></li>
-<li class="dawgdrops-item"><a title="						" href="https://rhlab.ece.uw.edu/sponsors/" title="Sponsors"  id="543">Sponsors</a></li>
-<li class="dawgdrops-item"><a title="						" href="https://rhlab.ece.uw.edu/join-us/" title="Join Us"  id="541">Join Us</a></li>
-</ul></div></nav>
-
-<div class="uw-hero-image"  style="background-image:url('https://ada.ece.uw.edu/wp-content/uploads/sites/26/2022/04/cropped-background-3.jpg');" ></div>
-
-<div class="container uw-body">
-
-  <div class="row">
-
-    <div class="col-md-12 uw-content" role='main'>
-
-      <a href="https://rhlab.ece.uw.edu/" title="Remote Hub Lab"><div class="uw-site-title">Remote Hub Lab</div></a>
-      <nav id="mobile-relative" class="frontpage" aria-label="mobile menu"><button class="uw-mobile-menu-toggle">Menu</button><ul class="uw-mobile-menu first-level"><div class="menu-dropdowns-container"><ul id="menu-dropdowns-1" class=""><li id="menu-item-540" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-540"><a title="						" href="https://rhlab.ece.uw.edu/">Home</a></li>
-<li id="menu-item-544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-544"><a title="						" href="https://rhlab.ece.uw.edu/people/">People</a></li>
-<li id="menu-item-577" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-577"><a title="						" href="https://rhlab.ece.uw.edu/about/">About</a></li>
-<li id="menu-item-575" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-575"><a title="						" href="https://rhlab.ece.uw.edu/labs/">Labs</a></li>
-<li id="menu-item-578" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-578"><a title="						" href="https://rhlab.ece.uw.edu/projects/">Projects</a>
-<ul class="sub-menu">
-	<li id="menu-item-579" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-375 current_page_item menu-item-579"><a title="						" href="https://rhlab.ece.uw.edu/projects/rhl-beadle/" aria-current="page">RHL-BEADLE</a></li>
-	<li id="menu-item-580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-580"><a title="						" href="https://rhlab.ece.uw.edu/projects/relia/">RELIA</a></li>
-	<li id="menu-item-581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-581"><a title="						" href="https://rhlab.ece.uw.edu/projects/rhl-butterfly/">RHL-Butterfly</a></li>
-	<li id="menu-item-712" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-712"><a href="https://rhlab.ece.uw.edu/?page_id=700">RHL-Woundcare</a></li>
-</ul>
-</li>
-<li id="menu-item-576" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576"><a title="						" href="https://rhlab.ece.uw.edu/news/">News</a></li>
-<li id="menu-item-542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-542"><a title="						" href="https://rhlab.ece.uw.edu/awards/">Awards</a></li>
-<li id="menu-item-543" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-543"><a title="						" href="https://rhlab.ece.uw.edu/sponsors/">Sponsors</a></li>
-<li id="menu-item-541" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-541"><a title="						" href="https://rhlab.ece.uw.edu/join-us/">Join Us</a></li>
-</ul></div></ul></nav>
-      <nav class='uw-breadcrumbs' aria-label='breadcrumbs'><ul><li ><a href="https://www.ece.uw.edu" title="UWECE Home">Home</a></li><li><a href="https://rhlab.ece.uw.edu/" title="Remote Hub Lab">Remote Hub Lab</a><li><li class="current"><a href="https://rhlab.ece.uw.edu/projects/" title="Projects">Projects</a></li></ul></nav>
-
-      <div id='main_content' class="uw-body-copy" tabindex="-1">
-
-      
-
-	<div id="mobile-sidebar">
-		<button id="mobile-sidebar-menu" class="visible-xs" aria-hidden="true" tabindex="1">
-	    	<div aria-hidden="true" id="ham">
-		    	<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-	   		<div id="mobile-sidebar-title" class="page_item"> Close Menu </div>
-		</button>
-		<div id="mobile-sidebar-links" aria-hidden="true" class="visible-xs">  <nav id="desktop-relative" aria-label="mobile menu that is not visible in the desktop version"><ul class="uw-sidebar-menu first-level"><li class="pagenav"><a href="https://rhlab.ece.uw.edu" title="Home" class="homelink">Home</a><ul><li class="page_item page-item-370 page_item_has_children current_page_ancestor current_page_parent child-page-existance-tester"><a href="https://rhlab.ece.uw.edu/projects/">Projects</a>
-<ul class='children'>
-	<li class="page_item page-item-380 child-page-existance-tester"><a href="https://rhlab.ece.uw.edu/projects/relia/">RELIA</a></li>
-	<li class="page_item page-item-375 current_page_item"><span>RHL-BEADLE</span></li>
-	<li class="page_item page-item-479 child-page-existance-tester"><a href="https://rhlab.ece.uw.edu/projects/rhl-butterfly/">RHL-Butterfly</a></li>
-</ul>
-</li>
-</ul></li></ul></nav></div>
-	</div>
-<p style="text-align: center;"><img fetchpriority="high" decoding="async" class="wp-image-376" src="woundcare-logo.jpg" alt="" width="300" height="100" srcset="woundcare-logo.jpg" sizes="(max-width: 513px) 100vw, 513px" /></a></em></p>
-<h1>Chronic wound management problem: why research?</h1>
-<p><span style="font-weight: 400;">The problem outlined in the statement highlights the challenges associated with effectively managing chronic wounds, particularly in the United States. Here's a summarized breakdown of the problem and why it necessitates research:
-</span></p>
-<style>
-    h2 {
-      font-size: 16px; /* Adjust the font size as needed */
-      margin-left: 100px; /* Adjust the left margin for space */
-    }
-    p {
-    margin-left: 100px; /* Adjust the left margin for space */
-  }
-  </style>
-<h2>1. Challenges in Chronic Wound Management:</h2>
-<p>Millions of individuals in the United States face difficulties in managing chronic wounds effectively. Chronic wounds often require ongoing care and monitoring, which can be complex and time-consuming for both patients and healthcare providers.</p>
-
-<h2>2. Technological Difficulties:</h2>
-<p>There are technological challenges in accurately monitoring the state of active wounds. Current methods may not provide reliable or real-time data on wound conditions, making it difficult for healthcare professionals to assess healing progress and make informed treatment decisions.</p>
-
-<h2>3. Lack of Consistent Monitoring Standards:</h2>
-<p>There is a lack of consistent standards or protocols that medical professionals can rely on for monitoring wound conditions. Without standardized guidelines, healthcare providers may use varying methods or assessments, leading to inconsistencies in care and potential gaps in treatment quality.</p>
-
-<h2>4. Impact on Healing Outcomes and Treatment Policies:</h2>
-<p>The absence of reliable monitoring standards can potentially impact healing outcomes for patients with chronic wounds. Inconsistent monitoring practices may result in delayed or inadequate treatment, leading to prolonged healing times or increased risk of complications.</p>
-
-<h2>5. Financial Implications:</h2>
-<p>The problem extends beyond healthcare outcomes to financial implications. Wound complications and the need for frequent dressing changes are significant cost drivers in healthcare institutions and long-term care facilities. Inefficient wound management practices can strain resources and increase healthcare costs.</p>
-
-<h1>What is the research strategy?</h1>
-<p><span style="font-weight: 400;">Our research strategy focuses on addressing the clinical and engineering relevance of effectively managing chronic wounds, highlighting the lack of a consistent standard for monitoring wound conditions and the potential impact on healing outcomes, treatment policies, and financial/health-associated repercussions. </span></p>
-<h2>1. Innovation: </h2>
-<p>Incorporating realistic effects into 3D reconstruction models, developing comprehensive datasets, and realizing ML-driven accurate classification are key innovations.
-</p>
-<h2>2. Clinical Aspects:</h2>
-<p>Systematic compilation of 3D scan information and cost-effective, accessible solutions are crucial clinical aspects.
-</p>
-<h2>3. Engineering Aspects:</h2>
-<p>Ensuring consistency in measurements, scalability, and intuitive interfaces are essential engineering aspects.
-</p>
-<h2>4. Approach:</h2>
-<p>Preliminary studies involve improving existing 3D reconstruction models, developing datasets, and realizing ML-driven classification. Risks and alternative strategies are considered at each step.</p>
-
-<h1>What funding sources support this project?</h1>
-<p style="text-align: left;">This project is funded by UW Research Royalty Funds, and NSF I-Corp</a>.</p>
-<h1>How can you contact us?</h1>
-<p><span style="font-weight: 400;">You can contact us at <a href="mailto:rhlab@uw.edu">rhlab@uw.edu</a></span></p>
-<p>&nbsp;</p>
-
-<p style="text-align: left;"> </p>
-<p>&nbsp;</p>
 
 
 
-      </div>
+
+
+
+
+
+
+
+			   <!--- Code for WoundCare -->
+			   <!--- Developer: Aadit Aggarwal --->
+			   <!--- Date: April 25, 2024 --->
+			   <link rel="stylesheet" href="styles.css"> 
+			   <div class="container-logo">
+			       <img src="logo-woundcare.png" alt="WoundCare Research Logo" />
+			       	<h1 color: blue;> WoundCare Research </h1>
+			   </div>
+
+
+			   	<p style="text-align: center; font-size: 1.5625em;" class="first-paragraph"> Millions of individuals in the United States face difficulties in managing chronic wounds effectively. Chronic wounds often require ongoing care and monitoring, which can be complex and time-consuming for both patients and healthcare providers. Our research strategy focuses on addressing the clinical and engineering relevance of effectively managing chronic wounds, highlighting the lack of a consistent standard for monitoring wound conditions and the potential impact on healing outcomes, treatment policies, and financial/health-associated repercussions.  </p>
+
+			   </div>
+
+    <br>
+    <img src="research-main.png" class="main-image">
+
+    <hr>
+    <div class="third-container">
+        <div class="third-container1">
+                <h1> Challange </h1>
+                <p> Millions of individuals in the United States face difficulties in managing chronic wounds effectively. Chronic wounds often require ongoing care and monitoring, which can be complex and time-consuming for both patients and healthcare providers. </p>
+        </div>
+        <div class="third-container2">
+                <h1> Technological Difficulties </h1>
+                <p> There are technological challenges in accurately monitoring the state of active wounds. Current methods may not provide reliable or real-time data on wound conditions, making it difficult for healthcare professionals to assess healing progress and make informed treatment decisions. </p>
+        </div>
+        <div class="third-container3">
+                <h1> Impact </h1>
+                <p> The absence of reliable monitoring standards can potentially impact healing outcomes for patients with chronic wounds. Inconsistent monitoring practices may result in delayed or inadequate treatment, leading to prolonged healing times or increased risk of complications. </p>
+        </div>
+    </div>
+
+
+
+    <hr>
+
+    <div class="first-container">
+        <div class="first-container1">
+                <h1> The Research Enterprise </h1>
+        </div>
+
+        <p style="text-align: center; font-size: 1.5625em;" class="first-paragraph">Preliminary studies involve improving existing 3D reconstruction models, developing datasets, and realizing ML-driven classification. Risks and alternative strategies are considered at each step. </p>
 
     </div>
 
-  
-          <div id="sidebar"></div>
+
+    <br>
+
+<div class="container-logo-1">
+     <img src="side-pic.png" class="side-image"> 
+     <p> Our research strategy focuses on addressing the clinical and engineering relevance of effectively managing chronic wounds, highlighting the lack of a consistent standard for monitoring wound conditions and the potential impact on healing outcomes, treatment policies, and financial/health-associated repercussions. Incorporating realistic effects into 3D reconstruction models, developing comprehensive datasets, and realizing ML-driven accurate classification are key innovations.Systematic compilation of 3D scan information and cost-effective, accessible solutions are crucial clinical aspects. Ensuring consistency in measurements, scalability, and intuitive interfaces are essential engineering aspects.</p>
+</div>
 
 
-  </div>
+<br>
+<div class="leftrIght-container">
+    <div class="profile">
+        <p> Preliminary studies involve improving existing 3D reconstruction models, developing datasets, and realizing ML-driven classification. Risks and alternative strategies are considered at each step. </p>
+        <div class="name"></div>
+        <div class="description"></div>
+    </div>
+    <div class="profile">
+        <img src="side-pic.png" alt="Member 1">
+        <div class="name"></div>
+        <div class="description"></div>
+    </div>
 
 </div>
 
-    <div role="contentinfo" class="uw-footer">
 
-        <a href="http://www.washington.edu" class="footer-wordmark">University of Washington</a>
 
-        <a href="http://www.washington.edu/boundless/"><h3 class="be-boundless">Be boundless</h3></a>
-
-        <h4>Connect with us:</h4>
-
-        <nav aria-label="social networking">
-            <ul class="footer-social">
-                <li><a class="facebook" href="http://www.facebook.com/UofWA">Facebook</a></li>
-                <li><a class="twitter" href="http://twitter.com/UW">Twitter</a></li>
-                <li><a class="instagram" href="http://instagram.com/uofwa">Instagram</a></li>
-                <li><a class="youtube" href="http://www.youtube.com/user/uwhuskies">YouTube</a></li>
-                <li><a class="linkedin" href="http://www.linkedin.com/company/university-of-washington">LinkedIn</a></li>
-                <li><a class="pinterest" href="http://www.pinterest.com/uofwa/">Pinterest</a></li>
-            </ul>
-        </nav>
-
-        <nav aria-label="footer navigation">
-            <ul class="footer-links">
-                <li><a href="http://www.uw.edu/accessibility">Accessibility</a></li>
-                <li><a href="http://uw.edu/contact">Contact Us</a></li>
-                <li><a href="http://www.washington.edu/jobs">Jobs</a></li>
-                <li><a href="http://www.washington.edu/safety">Campus Safety</a></li>
-                <li><a href="http://my.uw.edu/">My UW</a></li>
-                <li><a href="http://www.washington.edu/rules/wac">Rules Docket</a></li>
-                <li><a href="http://www.washington.edu/online/privacy/">Privacy</a></li>
-                <li><a href="http://www.washington.edu/online/terms/">Terms</a></li>
-                <li><a href="http://www.washington.edu/newsletter/">Newsletter</a></li>
-            </ul>
-        </nav>
-
-        <p>&copy; 2024 University of Washington  |  Seattle, WA</p>
-
+<hr>
+<h1> Meet the team </h1>
+<div class="team-container">
+    <div class="profile">
+        <img src="individual-pic.png" alt="Member 1">
+        <div class="name">ABC</div>
+        <div class="description">Project Manager with over 10 years of experience.</div>
+    </div>
+    <div class="profile">
+        <img src="individual-pic.png" alt="Member 1">
+        <div class="name">ABC</div>
+        <div class="description">Project Manager with over 10 years of experience.</div>
+    </div>
+    <div class="profile">
+        <img src="individual-pic.png" alt="Member 1">
+        <div class="name">ABC</div>
+        <div class="description">Project Manager with over 10 years of experience.</div>
+    </div>
+    <div class="profile">
+        <img src="individual-pic.png" alt="Member 1">
+        <div class="name">ABC</div>
+        <div class="description">Project Manager with over 10 years of experience.</div>
     </div>
 
-    </div><!-- #uw-container-inner -->
-    </div><!-- #uw-container -->
+    <div class="profile">
+        <img src="individual-pic.png" alt="Member 1">
+        <div class="name">ABC</div>
+        <div class="description">Project Manager with over 10 years of experience.</div>
+    </div>
+    <div class="profile">
+        <img src="individual-pic.png" alt="Member 1">
+        <div class="name">ABC</div>
+        <div class="description">Project Manager with over 10 years of experience.</div>
+    </div>
+    <div class="profile">
+        <img src="individual-pic.png" alt="Member 1">
+        <div class="name">ABC</div>
+        <div class="description">Project Manager with over 10 years of experience.</div>
+    </div>
+    <div class="profile">
+        <img src="individual-pic.png" alt="Member 1">
+        <div class="name">ABC</div>
+        <div class="description">Project Manager with over 10 years of experience.</div>
+    </div>
+    <div class="profile">
+        <img src="individual-pic.png" alt="Member 1">
+        <div class="name">ABC</div>
+        <div class="description">Project Manager with over 10 years of experience.</div>
+    </div>
+</div>
+<hr>
 
 
-</body>
+
+
+
+
+			   <!--- End of Code for WoundCare -->
+
+                                <p style="text-align: left;"></p>
+                                <p>&nbsp;</p>
+                            </div>
+                        </div>
+                        <div id="sidebar"></div>
+                    </div>
+                </div>
+                <div role="contentinfo" class="uw-footer">
+                    <a href="http://www.washington.edu" class="footer-wordmark">University of Washington</a>
+                    <a href="http://www.washington.edu/boundless/">
+                        <h3 class="be-boundless">Be boundless</h3>
+                    </a>
+                    <h4>Connect with us:</h4>
+                    <nav aria-label="social networking">
+                        <ul class="footer-social">
+                            <li>
+                                <a class="facebook" href="http://www.facebook.com/UofWA">Facebook</a>
+                            </li>
+                            <li>
+                                <a class="twitter" href="http://twitter.com/UW">Twitter</a>
+                            </li>
+                            <li>
+                                <a class="instagram" href="http://instagram.com/uofwa">Instagram</a>
+                            </li>
+                            <li>
+                                <a class="youtube" href="http://www.youtube.com/user/uwhuskies">YouTube</a>
+                            </li>
+                            <li>
+                                <a class="linkedin" href="http://www.linkedin.com/company/university-of-washington">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a class="pinterest" href="http://www.pinterest.com/uofwa/">Pinterest</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav aria-label="footer navigation">
+                        <ul class="footer-links">
+                            <li>
+                                <a href="http://www.uw.edu/accessibility">Accessibility</a>
+                            </li>
+                            <li>
+                                <a href="http://uw.edu/contact">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="http://www.washington.edu/jobs">Jobs</a>
+                            </li>
+                            <li>
+                                <a href="http://www.washington.edu/safety">Campus Safety</a>
+                            </li>
+                            <li>
+                                <a href="http://my.uw.edu/">My UW</a>
+                            </li>
+                            <li>
+                                <a href="http://www.washington.edu/rules/wac">Rules Docket</a>
+                            </li>
+                            <li>
+                                <a href="http://www.washington.edu/online/privacy/">Privacy</a>
+                            </li>
+                            <li>
+                                <a href="http://www.washington.edu/online/terms/">Terms</a>
+                            </li>
+                            <li>
+                                <a href="http://www.washington.edu/newsletter/">Newsletter</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <p>&copy;2024 University of Washington  |  Seattle, WA</p>
+                </div>
+            </div>
+            <!-- #uw-container-inner -->
+        </div>
+        <!-- #uw-container -->
+    </body>
 </html>
+
