@@ -37,6 +37,7 @@ body {
     height: auto; /* Maintain the aspect ratio of the image */
 }   
 
+
 .other-headers {
     width: 100%; /* Ensure the container takes full width of the viewport */
     display: flex; /* Use flexbox to align the child img element */
@@ -194,6 +195,7 @@ float: left;
     margin: auto; /* Center the grid horizontally */
     padding: 20px;
 }
+
 .team-container .profile:nth-last-child(-n+3) { /* Last 3 profiles for second row */
     grid-column: span 1; /* Each takes up only one fraction of the space */
 }
@@ -226,6 +228,7 @@ transform:perspective() ;
 transform:scale(1.1) ;
 transform:translate();
 }
+
 
 
 iframe{      
