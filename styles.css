@@ -23,37 +23,42 @@ body {
     padding: 20px; /* Padding around the content */
 }
 
-/* Styling for first-container1 */
-.first-container1 {
-    height: 100%
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Starts here */
+
+.container-logo {
+/* background-color: black;  Set the background color of the container to black */
+    width: 100%; /* Ensure the container takes full width of the viewport */
+    display: flex; /* Use flexbox to align the child img element */
+    justify-content: center; /* Center the img element horizontally */
+}
+    
+.container-logo img {
+    width: 7%; /* Set the image width to 10% of its container, which is the viewport */
+    height: auto; /* Maintain the aspect ratio of the image */
+}   
+
+.other-headers {
+    width: 100%; /* Ensure the container takes full width of the viewport */
+    display: flex; /* Use flexbox to align the child img element */
+    justify-content: center; /* Center the img element horizontally */
+}   
+
+.other-headers img {
+    width: 15%; /* Set the image width to 10% of its container, which is the viewport */
+    height: auto; /* Maintain the aspect ratio of the image */
+}   
+
+.text-content-left {
+	text-align: left;
 }
 
-/* Styling for first-container2 */
-.first-container2 {
-    height: 100%
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Styling for first-containeri3 */
-.first-container3 {
-    height: 100%
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.text-content-center {
+	text-align: center;
 }
 
 .main-image {
    width: 100vw;
    height: 20vw;
-#   object-fit: cover;
 }
 
 h1 {
@@ -65,17 +70,19 @@ h1 {
     font-size: 2.44140625em;
     letter-spacing: -.75px;
     color: #8B0000;
-    font-family: cursive;
+    font-family: sans-serif;
+    margin-left: 10px;
 }
 
 h2 {
     text-align: center;
-font-weight: 900;
+    font-weight: 900;
 }
 
 p {
-        font-size: 1.5625em;
-        letter-spacing: -.5px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5625em;
+    letter-spacing: -.5px;
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -86,74 +93,76 @@ p {
     margin-bottom: .512em;
     margin-left: 10px;
     margin-right: 10px;
-    text-align: center;
 }
 
-.third-container {
+.container-3split {
     display: flex; /* Uses flexbox to place divs side by side */
     width: 100%; /* Full width of the container */
     justify-content: space-between;
     gap: 3px;
 } 
 
-/* Styling for third-container1 */
-.third-container1 {
+.container-3split-left {
     width:30%;
     height: 100%
     margin: 0;
     display: block;
     align-items: center;
+    background-color: #E5E4E2; 
 }
 
-/* Styling for third-container2 */
-.third-container2 {
+
+.container-3split-middle {
 	width:30%;
     height: 100%
     margin: 0;
     display: block;
     align-items: center;
     justify-content: center;
+    background-color: #E5E4E2; 
 }
 	
 
-/* Styling for third-container3 */
-.third-container3 {
+.container-3split-right {
 	width:30%;
     height: 100%
     margin: 0;
     display: block;
     align-items: center;
     justify-content: right;
+    background-color: #E5E4E2; 
 }
 
-.centered-image {
-    display: block;
-    margin: 0 auto;
-    width: 7vw;
+.container-3split-left:hover {
+    background-color: #54b3d6; 
+
 }
 
-.container-logo-1 {
-/* background-color: black;  Set the background color of the container to black */
+.container-3split-middle:hover {
+    background-color: #54b3d6; 
+}
+
+.container-3split-right:hover {
+    background-color: #54b3d6; 
+}
+
+.leftrIght-container-1 {
     width: 100%; /* Ensure the container takes full width of the viewport */
     display: flex; /* Use flexbox to align the child img element */
-    justify-content: center; /* Center the img element horizontally */
+    justify-content: left; /* Center the img element horizontally */
 }
 
-.container-logo-1 img {
+.leftrIght-container-1 img {
     width: 30%; /* Set the image width to 10% of its container, which is the viewport */
     height: auto; /* Maintain the aspect ratio of the image */
 }
 
-.container-logo {
-/* background-color: black;  Set the background color of the container to black */
-    width: 100%; /* Ensure the container takes full width of the viewport */
-    display: flex; /* Use flexbox to align the child img element */
-    justify-content: center; /* Center the img element horizontally */
-}
-
-.container-logo img {
-    width: 7%; /* Set the image width to 10% of its container, which is the viewport */
-    height: auto; /* Maintain the aspect ratio of the image */
+.leftrIght-container-2 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 20px; /* Space between the columns and rows */
+    margin: auto; /* Center the grid horizontally */
+    padding: 20px;
 }
 
 .side-image {
@@ -163,22 +172,16 @@ p {
 }
 
 .rightside-image {
-    width: 50vw; /* Ensure the container takes full width of the viewport */
+    width: 70%; /* Ensure the container takes full width of the viewport */
     float: right;
+    border-radius:100%;
+    text-align: right;
+    height: auto; /* Maintain aspect ratio */
 }
 
 .leftside-content {
 width: 50vw;
 float: left;
-}
-
-.leftrIght-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Handles 2 columns in the first row */
-    gap: 20px; /* Space between the columns and rows */
-    max-width: 900px; /* Maximum width of the grid */
-    margin: auto; /* Center the grid horizontally */
-    padding: 40px;
 }
 
 /* Meet the team */
@@ -194,18 +197,22 @@ float: left;
 .team-container .profile:nth-last-child(-n+3) { /* Last 3 profiles for second row */
     grid-column: span 1; /* Each takes up only one fraction of the space */
 }
+
+
 .profile {
-    text-align: center; /* Center-aligns the text within each profile */
+    text-align: left; /* Center-aligns the text within each profile */
 }
+
 .profile img {
-    width: 100%; /* Makes the image responsive */
+    width: 70%; /* Makes the image responsive */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Circular images */
+    border-radius: 100%; /* Circular images */
 }
 .name {
     font-size: 20px; /* Larger font size for the name */
     color: #333; /* Dark grey color for text */
     margin-top: 10px; /* Space between image and name */
+    text-align: center;
 }
 
 .description {
@@ -213,3 +220,19 @@ float: left;
     color: #666; /* Lighter grey color for text */
     margin-top: 5px; /* Space between name and description */
 }
+
+img:hover {
+transform:perspective() ;
+transform:scale(1.1) ;
+transform:translate();
+}
+
+
+iframe{      
+    display: block;  /* iframes are inline by default */   
+    height: 100vh;  /* Set height to 100% of the viewport height */   
+    width: 100vw;  /* Set width to 100% of the viewport width */     
+    border: none; /* Remove default border */
+    background: lightyellow; /* Just for styling */
+}
+
