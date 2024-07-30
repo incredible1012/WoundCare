@@ -850,27 +850,29 @@
 </div>
 
 <p class="text-content-center"> 
-Millions of individuals in the United States face difficulties in managing chronic wounds effectively. Chronic wounds often require ongoing care and monitoring, which can be complex and time-consuming for both patients and healthcare providers. Our research strategy focuses on addressing the clinical and engineering relevance of effectively managing chronic wounds, highlighting the lack of a consistent standard for monitoring wound conditions and the potential impact on healing outcomes, treatment policies, and financial/health-associated repercussions.  
+    Effective management of chronic wounds remains challenging for millions of individuals in the United States amidst technological difficulties in accurately evaluating the state of active wounds. The lack of a consistent standard that medical professionals can rely on for monitoring wound conditions can potentially affect healing outcomes and downstream treatment policies. Such policies may impact the likelihood of wound complications and the frequency of dressing changes, both leading cost drivers in institutions and long-term care facilities. Our research strategy focuses on addressing this gap in healthcare by introducing a novel, mobile application that enables practitioners to seamlessly scan and collect key metrics on chronic wounds in 3D.    
 </p>
 
 <br>
-<img src="research-main.png" class="main-image">
+<!-- <img src="research-main.png" class="main-image"> -->
 
 <hr>
 <div class="container-3split">
 	<div class="container-3split-left">
-                <h1 class="text-content-center"> Challange </h1>
-                <p class="text-content-center"> Millions of individuals in the United States face difficulties in managing chronic wounds effectively. Chronic wounds often require ongoing care and monitoring, which can be complex and time-consuming for both patients and healthcare providers. </p>
+                <h1 class="text-content-center"> Dataset </h1>
+                <p class="text-content-center"> We propose a complete data repository encompassing wound scans from patients recruited in coordination with the VA Puget Sound Healthcare
+                    System. The volume of information we gather and label will provide new insight into the 3D structure of wounds through the use of structured light and serve as an alternative to current 2D image datasets. By complementing images with depth, we anticipate clinicians will possess a greater suite of nuanced, statistical details that empower them to monitor wound statuses and recommend effective solutions. </p>
         </div>
 
         <div class="container-3split-middle">
-                <h1 class="text-content-center"> Difficulties </h1>
-                <p class="text-content-center"> There are technological challenges in accurately monitoring the state of active wounds. Current methods may not provide reliable or real-time data on wound conditions, making it difficult for healthcare professionals to assess healing progress and make informed treatment decisions. </p>
+                <h1 class="text-content-center"> Algorithm </h1>
+                <p class="text-content-center"> Following discussions with 130+ individuals in woundcare-adjacent professions, ambiguity in wound assesment was consistently raised as a critical issue. In contrast to manual and photogrammetry-based wound measurement, which remains highly prone to error or user subjectivity, our system focuses on the consistent extraction of accurate wound parameters. To assist with this aim, our VA consultants will ensure accurate annotations of collected wounds, safeguarding the integrity of developed models. </p>
         </div>
 
         <div class="container-3split-right">
-                <h1 class="text-content-center"> Impact </h1>
-                <p class="text-content-center"> The absence of reliable monitoring standards can potentially impact healing outcomes for patients with chronic wounds. Inconsistent monitoring practices may result in delayed or inadequate treatment, leading to prolonged healing times or increased risk of complications. </p>
+                <h1 class="text-content-center"> Interface </h1>
+                <p class="text-content-center"> We exploit the advantages of mobile technology to give practitioners the ability to image wounds from specific perspectives more conducive to analysis. Latency tied to data upload for mobile applications is anticipated to be negligible at less than one second, replacing the lengthier and more laborious task of manual documentation. We offer intuitive frontend options for users wanting to override inaccuracies, allowing clinicians to adjust the measurements when desired and prioritize ease-of-use in development.
+                </p>
         </div>
 
 </div>
@@ -879,37 +881,13 @@ Millions of individuals in the United States face difficulties in managing chron
 
 <hr>
 
-<div class="text-content-center">
-        <h1> The Research Enterprise </h1>
-        <p>Preliminary studies involve improving existing 3D reconstruction models, developing datasets, and realizing ML-driven classification. Risks and alternative strategies are considered at each step. </p>
-
-</div>
-
+<h1> Our Work </h1>
 
 <br>
 
 <div class="leftrIght-container-1">
-     <img src="research-pic.png" class="side-image"> 
-     <p class="text-content-left"> Our research strategy focuses on addressing the clinical and engineering relevance of effectively managing chronic wounds, highlighting the lack of a consistent standard for monitoring wound conditions and the potential impact on healing outcomes, treatment policies, and financial/health-associated repercussions. Incorporating realistic effects into 3D reconstruction models, developing comprehensive datasets, and realizing ML-driven accurate classification are key innovations. Systematic compilation of 3D scan information and cost-effective, accessible solutions are crucial clinical aspects.</p>
-</div>
-
-<br>
-
-<div class="leftrIght-container-2">
-	<p class="text-content-left"> Ensuring consistency in measurements, scalability, and intuitive interfaces are essential engineering aspectsi. Preliminary studies involve improving existing 3D reconstruction models, developing datasets, and realizing ML-driven classification. Risks and alternative strategies are considered at each step. </p>
-    
-	<img src="side-pic.png" class="rightside-image" >
-</div>
-
-
-<hr>
-
-<div class="other-headers">
-	<img src="funding.png" />
-</div>
-<div class="text-content-center">
-        <p> This project is funded by UW Research Royalty Funds, and NSF I-Corp.  </p>
-
+    <p>We intend to (1) construct a comprehensive dataset of chronic wounds containing three-dimensional RGB information which will improve the performance of inference algorithms tailored towards the recognition of tissue sub-regions in the aforementioned wounds, (2) augment such dataset via state-of-the-art graphics software to enable algorithmic generalization, subject to consulting clinicians’ review, (3) implement a segmentation algorithm to identify key wound metrics and sub-regions in real-time, and (4) package this algorithm, in addition to a consortium of visualization tools, within a user-friendly mobile application that enables streamlined recording of data for electronic medical records (EMRs). (1) and (4) are anticipated to require the non-invasive capture of visual data relevant to patients’ wounds at the VA Puget Sound Healthcare System, via the use of TrueDepth, an embedded structured lighting system on iPhone devices. </p>
+        <img src="annotated-wound-pic.png" class="side-image"> 
 </div>
 
 
@@ -920,7 +898,7 @@ Millions of individuals in the United States face difficulties in managing chron
 </div>
 
 <div style="text-align:center">    
-     <a href="https://rhlab.ece.uw.edu/people/">Team Page</a>
+     <p> <a href="https://rhlab.ece.uw.edu/people/">Team Page</a> </p>
 </div>
 
 <hr>
